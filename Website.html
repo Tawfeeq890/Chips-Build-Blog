@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head> 
+ <link href="style.css" type="text/css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ <title>Chip's Build Blog</title> 
+</head>
+    
+
+<body>
+
+
+<div class="tab">
+<button class="tablinks" onclick="openCity(event, 'Home')">Home</button> 
+    
+  <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
+
+  <button class="tablinks" onclick="openCity(event, 'Social Media')">Social Media</button>
+    
+  <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button> 
+    
+  <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button> 
+    
+</div>
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p><a align="right" href="Website.html">Home</a></p>
+</div>
+    
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p><a align="right" href="contact.html">Contact Me</a></p>
+</div>
+
+<div id="Social Media" class="tabcontent">
+  <h3>Social Media</h3>
+  <p> <a align="right" href="Social Media.html">Social Media</a></p> 
+</div>
+
+<div id="About Me" class="tabcontent">
+  <h3>About Me</h3>
+  <p>  <a align="right" href="About Me.html">About Me</a></p>
+    
+</div>
+    <div id="Projects" class="tabcontent">
+  <h3>Projects</h3>
+  <p>  <a align="right" href="Projects.html">Projects</a></p>
+</div>
+
+    <script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+     
+    </body>
+    
